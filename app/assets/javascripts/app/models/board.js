@@ -7,12 +7,3 @@ App.Models.Board = Backbone.Model.extend({
 });
 
 
-App.Views.BoardView = Backbone.View.extend({
-  render: function() {
-    // $(this.el).append('<p>Board says hi</p>');
-
-    $('#oxo-container').append('<p>Board says hi</p>');
-    return this;
-    // document.getElementById('oxo-container').append('<p>Board says hi</p>');
-  }
-})
