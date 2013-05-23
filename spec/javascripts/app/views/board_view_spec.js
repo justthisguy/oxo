@@ -1,4 +1,4 @@
-describe("BoardView", function() {
+describe("App.Views.Board", function() {
   
   beforeEach(function() {
     this.view = new App.Views.Board();
