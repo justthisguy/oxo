@@ -1,9 +1,0 @@
-# .pairs - configuration for 'git pair'
-pairs:
-  # <initials>: <Firstname> <Lastname>[; <email-id>]
-  ch: Chris Houhoulis; chris@chrishouhoulis.com
-  kd: Ken Decanio; ken-is-a-git@justthisguy.org
-email:
-  prefix: pair
-  # no_solo_prefix: true
-#global: false
