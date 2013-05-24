@@ -1,5 +1,4 @@
 App.Views.Board = Backbone.View.extend({
-	className: "oxo-board",
 
   render: function() {
     // $(this.el).append('<p>Board says hi</p>');
