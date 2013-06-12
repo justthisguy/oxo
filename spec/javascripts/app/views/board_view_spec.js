@@ -10,10 +10,15 @@ describe("App.Views.Board", function() {
       expect(this.view.el.nodeName).toEqual("DIV");
     });
     
-    // it("should create a class", function() {
-    //   expect($(this.view.el)).toHaveId('oxo-board');
-    // });
+    it("should create a <p>", function() {
+      debugger;
+      expect($(this.view.el).has('p')).toBeTruthy;
+    });
     
+    it("fails because it doesn't have a span", function() {
+      expect($(this.view.el).has('span')).toBeTruthy;
+    });
+
   });
   
 });

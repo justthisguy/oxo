@@ -1,7 +1,17 @@
-describe("App.Views.Board", function(){
+describe("App.Models.Board", function(){
 
-  it('displays an empty board when loaded', function(){
-    expect(1).toEqual(1);
+  beforeEach(function() {
+    var board = new App.Models.Board();
+  });
+  
+
+  it('contains an empty board', function(){
+    expect(board.get).toEqual(1);
+
+    squares = [null,null,null, null,null,null, null,null,null]
   });
 
 });
+
+
+
