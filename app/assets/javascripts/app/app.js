@@ -8,7 +8,7 @@ var App = {
 
 App.initialize = function() {
 
-	var board = new App.Models.Board;
+	var board = new App.Models.Board();
 	App.Views.board = new App.Views.Board({model:board});
 	App.Views.board.render();
 

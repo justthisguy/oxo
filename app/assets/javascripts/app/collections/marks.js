@@ -1,1 +1,0 @@
-window.Marks = Backbone.Collection.extend({});
