@@ -15,12 +15,6 @@ App.Views.Board = Backbone.View.extend({
       '<% }) %>'
     ),
 
-  initialize: function() {
-
-  },
-
-
-
   render: function() {
     var boardLayout =  
     [
@@ -29,24 +23,9 @@ App.Views.Board = Backbone.View.extend({
       ["lower_left", "lower_middle", "lower_right"]
     ];
 
-    // $(this.el).append('<p>Board says hi</p>');
-    // document.getElementById('oxo-container').append('<p>Board says hi</p>');
-
-
-    var foo = this.model.get('squares');
-    console.log(foo);
-    foo = _.extend(foo, {'layout':boardLayout});
-
-    var renderedContent = this.template( foo );
-    console.log(renderedContent)      
-
-    $(this.el).html( renderedContent );
-    $('#oxo-board').append(renderedContent);
-
-
+    attrs = _.extend(this.model.get('squares'), {'layout':boardLayout});
+    $('#oxo-board').append( this.template( attrs ));
     return this.el;
   },
-
-
 
 })

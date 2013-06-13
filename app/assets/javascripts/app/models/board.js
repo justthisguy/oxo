@@ -1,17 +1,17 @@
 App.Models.Board = Backbone.Model.extend({
-  defaults: { squares: quux },
+  defaults: { squares: {} },
 
   initialize: function() {
-    this.set("squares", quux);
+    this.set("squares", initial_square_data);
   }
   
 });
 
 
-var quux =  {
+var initial_square_data =  {
       upper_left: null,
-      upper_middle: true,
-      upper_right: false,
+      upper_middle: null,
+      upper_right: null,
 
       middle_left: null,
       middle_middle: null,
