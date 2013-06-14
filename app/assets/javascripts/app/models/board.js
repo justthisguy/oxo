@@ -1,27 +1,35 @@
 App.Models.Board = Backbone.Model.extend({
-  defaults: { squares: {} },
+  defaults: {
+    squares: {},
+    empty: 'e',
+    x: 'x',
+    o: 'o',
+    layout:
+    [
+      ["upper-left", "upper-middle", "upper-right"],
+      ["middle-left", "middle-middle", "middle-right"],
+      ["lower-left", "lower-middle", "lower-right"]
+    ]
+  },
 
   initialize: function() {
-    this.set("squares", initial_square_data);
-  }
+    this.set("squares", this.initial_square_data());
+  },
   
+  initial_square_data:  function() {
+    var self = this;
+    var squares = {}
+
+    var flat = _.flatten(this.get('layout'));
+
+    _.each( flat, function(position) {
+      squares[position] = self.get('empty');
+    } );
+
+    return squares;
+  },
+
 });
-
-
-var initial_square_data =  {
-      upper_left: null,
-      upper_middle: null,
-      upper_right: null,
-
-      middle_left: null,
-      middle_middle: null,
-      middle_right: null,
-
-      lower_left: null,
-      lower_middle: null,
-      lower_right: null
-    }
-
 
 
 // _.extend(this, Backbone.Events);
