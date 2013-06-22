@@ -5,7 +5,7 @@ OXO.Views.Board = Backbone.View.extend({
         '<div class="row">' +
           '<% _.each(row, function(location) { %>' +
             '<div class="cell" id="<%= location %> ">' +
-            '<img src="assets/images/<%= squares[location] %>.png"></img></div>' +
+            '<img src="assets/images/<%= squares.findWhere({location: location}).get("value") %>.png"></img></div>' +
           '<% }) %>' +
         '</div>' +
       '<% }) %>'
