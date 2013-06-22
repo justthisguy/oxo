@@ -1,13 +1,7 @@
-App.Models.Board = Backbone.Model.extend({
+OXO.Models.Board = Backbone.Model.extend({
   defaults: {
     squares: {},
-    layout:
-    [
-      ["upper-left", "upper-middle", "upper-right"],
-      ["middle-left", "middle-middle", "middle-right"],
-      ["lower-left", "lower-middle", "lower-right"]
-    ],
-    turn: 'x'
+    layout: [],
   },
 
   initialize: function() {

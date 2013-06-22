@@ -1,4 +1,4 @@
-var App = {
+var OXO = {
   Models: {},
   Collections: {},
   Views: {},
@@ -6,11 +6,17 @@ var App = {
   Router: {}
 };
 
-App.initialize = function() {
+OXO.initialize = function() {
 
-	var board = new App.Models.Board();
-	App.Views.board = new App.Views.Board({model:board, el: '#oxo-board'});
-	App.Views.board.render();
+  this.set({turn: 'x'});
+
+	var board = new OXO.Models.Board(the_layout);
+	OXO.Views.board = new OXO.Views.Board({model:board, el: '#oxo-board'});
+	OXO.Views.board.render();
 
 //	Backbone.history.start();
 };
+
+var the_layout = { layout:  [ ["upper-left", "upper-middle", "upper-right"],
+                              ["middle-left", "middle-middle", "middle-right"],
+                              ["lower-left", "lower-middle", "lower-right"] ] }

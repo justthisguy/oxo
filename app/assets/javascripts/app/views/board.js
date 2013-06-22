@@ -1,4 +1,4 @@
-App.Views.Board = Backbone.View.extend({
+OXO.Views.Board = Backbone.View.extend({
 
   template: _.template(
       '<% _.each(layout, function(row){ %>' +

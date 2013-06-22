@@ -1,7 +1,7 @@
-describe("App.Models.Board", function(){
+describe("OXO.Models.Board", function(){
 
   beforeEach(function() {
-    var board = new App.Models.Board();
+    var board = new OXO.Models.Board();
   });
   
 

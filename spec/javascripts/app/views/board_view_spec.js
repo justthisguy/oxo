@@ -1,7 +1,7 @@
-describe("App.Views.Board", function() {
+describe("OXO.Views.Board", function() {
   
   beforeEach(function() {
-    this.view = new App.Views.Board();
+    this.view = new OXO.Views.Board();
   });
   
   describe("Instantiation", function() {
