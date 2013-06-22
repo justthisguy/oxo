@@ -1,15 +1,13 @@
 App.Models.Board = Backbone.Model.extend({
   defaults: {
     squares: {},
-    empty: 'e',
-    x: 'x',
-    o: 'o',
     layout:
     [
       ["upper-left", "upper-middle", "upper-right"],
       ["middle-left", "middle-middle", "middle-right"],
       ["lower-left", "lower-middle", "lower-right"]
-    ]
+    ],
+    turn: 'x'
   },
 
   initialize: function() {
@@ -23,11 +21,24 @@ App.Models.Board = Backbone.Model.extend({
     var flat = _.flatten(this.get('layout'));
 
     _.each( flat, function(position) {
-      squares[position] = self.get('empty');
+      squares[position] = self.empty();
     } );
 
     return squares;
   },
+
+  empty: function() {
+    return 'e'
+  },
+
+  x: function() {
+    return 'x'
+  },
+
+  o: function() {
+    return 'o'
+  }
+
 
 });
 

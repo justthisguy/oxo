@@ -1,8 +1,5 @@
 App.Views.Board = Backbone.View.extend({
 
-  imageForLocation: function(location) {
-    return 'assets/images/x1.png'
-  },
   template: _.template(
       '<% _.each(layout, function(row){ %>' +
         '<div class="row">' +
@@ -21,8 +18,9 @@ App.Views.Board = Backbone.View.extend({
         'layout':this.model.get('layout')
       };
 
-    $('#oxo-board').append( this.template( attrs ));
-    return this.el;
+    this.$el.append( this.template( attrs ));
+    return this;
   },
+
 
 })
