@@ -14,7 +14,14 @@ OXO.initialize = function() {
 	OXO.Views.board = new OXO.Views.Board({model:OXO.Models.board, el: '#oxo-board'});
 	OXO.Views.board.render();
 
-//	Backbone.history.start();
+  // the board view sets up the html infrastructure for the board.  
+  // the cell views must be rendered after
+  OXO.Models.board.get('cells').each(function(cell_model) {
+    var cell_view = new OXO.Views.Board({model:cell_model, el: '#' + cell_model.get('location')});
+    cell_view.render();
+  })
+
+
 };
 
 OXO.layout = [["upper-left", "upper-middle", "upper-right"],
