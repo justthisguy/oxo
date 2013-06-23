@@ -10,8 +10,8 @@ var OXO = {
 
 OXO.initialize = function() {
 
-	var board = new OXO.Models.Board({layout: OXO.layout});
-	OXO.Views.board = new OXO.Views.Board({model:board, el: '#oxo-board'});
+	OXO.Models.board = new OXO.Models.Board({layout: OXO.layout});
+	OXO.Views.board = new OXO.Views.Board({model:OXO.Models.board, el: '#oxo-board'});
 	OXO.Views.board.render();
 
 //	Backbone.history.start();

@@ -8,7 +8,7 @@ describe("OXO.Models.Board", function(){
   it('contains an empty board', function(){
     expect(board.get).toEqual(1);
 
-    squares = [null,null,null, null,null,null, null,null,null]
+    cells = [null,null,null, null,null,null, null,null,null]
   });
 
 });

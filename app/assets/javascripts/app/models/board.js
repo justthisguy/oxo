@@ -1,11 +1,11 @@
 OXO.Models.Board = Backbone.Model.extend({
   defaults: {
-    squares: {},
+    cells: {},
     layout: [],
   },
 
   initialize: function() {
-    this.set("squares", this.initial_square_data());
+    this.set("cells", this.initial_cell_data());
   },
 
   empty: function() {
@@ -20,17 +20,17 @@ OXO.Models.Board = Backbone.Model.extend({
     return 'o'
   },
 
-  initial_square_data:  function() {
+  initial_cell_data:  function() {
     var self = this;
-    var initial_squares = new OXO.Collections.Cell;
+    var initial_cells = new OXO.Collections.Cell;
 
     var flat = _.flatten(this.get('layout'));
 
     _.each( flat, function(location) {
-      initial_squares.add([ { location: location, value: self.empty() } ]);
+      initial_cells.add([ { location: location, value: self.empty() } ]);
     } );
 
-    return initial_squares;
+    return initial_cells;
   },
 
 });
