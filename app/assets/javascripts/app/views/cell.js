@@ -4,10 +4,17 @@ OXO.Views.Cell = Backbone.View.extend({
     '<img src="assets/images/<%= value %>.png"></img></div>'
     ),
 
+  events: {
+    "click" : "do_click",
+  },
+
   render: function() {
-    console.log(this.model.attributes)
-    this.$el.append( this.template( this.model.attributes ));
+    this.$el.html( this.template( this.model.attributes ));
     return this;
   },
+
+  do_click: function() {
+    alert("I am an alert box!");
+  }
 
 })

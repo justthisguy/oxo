@@ -17,7 +17,7 @@ OXO.initialize = function() {
   // the board view sets up the html infrastructure for the board.  
   // the cell views must be rendered after
   OXO.Models.board.get('cells').each(function(cell_model) {
-    var cell_view = new OXO.Views.Board({model:cell_model, el: '#' + cell_model.get('location')});
+    var cell_view = new OXO.Views.Cell({model:cell_model, el: '#' + cell_model.get('location')});
     cell_view.render();
   })
 

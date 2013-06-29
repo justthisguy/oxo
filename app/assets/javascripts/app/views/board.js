@@ -4,7 +4,7 @@ OXO.Views.Board = Backbone.View.extend({
       '<% _.each(layout, function(row){ %>' +
         '<div class="row">' +
           '<% _.each(row, function(location) { %>' +
-            '<div class="cell" id="<%= location %> ">' +
+            '<div class="cell" id="<%= location %>">' +
             '</div>' +
           '<% }) %>' +
         '</div>' +
