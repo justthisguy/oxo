@@ -24,6 +24,16 @@ OXO.initialize = function() {
 
 };
 
+OXO.take_turn = function() {
+  var current = OXO.turn;
+  if (OXO.turn == 'x') {
+    OXO.turn = 'o'
+  } else {
+    OXO.turn = 'x'
+  }
+  return current;
+}
+
 OXO.layout = [["upper-left", "upper-middle", "upper-right"],
               ["middle-left", "middle-middle", "middle-right"],
               ["lower-left", "lower-middle", "lower-right"] ]
